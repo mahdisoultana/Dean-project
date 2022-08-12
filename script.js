@@ -68,7 +68,7 @@ btnForPopup.forEach((btn, i) => {
 
     const imgPopIcon = imgTitlePopup.querySelector("img");
     const popTitle = imgTitlePopup.querySelector("span");
-    imgPopIcon.setAttribute("src", `/imgs/icons/${i + 1}-icon.png`);
+    imgPopIcon.setAttribute("src", `./imgs/icons/${i + 1}-icon.png`);
     popupParagraph.textContent = data[i].desc;
     popTitle.textContent = data[i].title;
   });
