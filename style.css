@@ -696,8 +696,8 @@ a:active {
 }
 .closebtn:hover .path,
 .closebtn:hover span {
-  fill: #2e006a;
-  color: #2e006a;
+  fill: #1b1464;
+  color: #1b1464;
 }
 .closebtn {
   bottom: 3rem;
@@ -758,6 +758,13 @@ a:active {
 }
 .gr-7-row {
   background: linear-gradient(0deg, #bf001a, #bf001a);
+}
+.gr-4-row .closebtn:hover .path,
+.gr-4-row .closebtn:hover span,
+.gr-6-row .closebtn:hover .path,
+.gr-6-row .closebtn:hover span {
+  fill: #02d9ff;
+  color: #02d9ff;
 }
 .popup-signature {
   background: linear-gradient(
