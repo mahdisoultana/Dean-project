@@ -45,8 +45,8 @@ btnForPopup.forEach((btn, i) => {
 });
 const golabaleTl = gsap.timeline({
   defaults: {
-    duration: 0.6,
-    ease: "power3.in",
+    duration: 0.4,
+    ease: "power2.in",
   },
 });
 // animation row on start
