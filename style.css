@@ -547,13 +547,17 @@ img {
 
 a {
   text-decoration: none;
-  font-weight: bold;
-  color: rgb(2, 0, 14);
+  font-weight: 500;
+  color: rgb(5, 0, 31);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   padding: 0.4rem;
+}
+.boxstyle:hover a {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
 }
 bdo {
   display: flex;
@@ -580,14 +584,15 @@ a:active {
   justify-content: flex-start;
   align-items: center;
   display: flex;
-
+  height: auto;
+  overflow: hidden;
   line-height: 1;
 }
 .boxstyle img {
   width: 45px;
 }
 .boxstyle:hover {
-  background: rgb(152, 152, 255);
+  background: rgb(67, 89, 185);
   cursor: pointer;
 }
 .boxstyle1 p {
@@ -685,7 +690,12 @@ a:active {
   background: url("./imgs/logo.png") no-repeat center center/cover;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
 }
-
+.img-title-popup {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-end;
+}
 .img-title-popup img {
   margin: 0;
   width: 70px;
@@ -697,18 +707,23 @@ a:active {
 }
 
 .closebtn {
+  transform-origin: bottom center;
   z-index: 30;
 }
 .closebtn:hover .path,
 .closebtn:hover span {
   fill: #1b1464;
-  color: #1b1464;
+}
+.closebtn:hover span {
+  font-size: 1.3rem;
 }
 .closebtn {
   bottom: 3rem;
+  display: block;
 }
 
 .closebtn span {
+  transition: 0.2s all;
   display: block;
   margin-top: -1rem;
   font-size: 2rem;
@@ -769,7 +784,6 @@ a:active {
 .gr-6-row .closebtn:hover .path,
 .gr-6-row .closebtn:hover span {
   fill: #02d9ff;
-  color: #02d9ff;
 }
 .popup-signature {
   background: linear-gradient(
