@@ -9,25 +9,6 @@ const btnForPopup = [...document.querySelectorAll(".btn-for-popup")];
 const imgPopIcon = imgTitlePopup.querySelector("img");
 const popTitle = imgTitlePopup.querySelector("span");
 
-let popupSectionTl = gsap.timeline({
-  defaults: {
-    // children inherit these defaults
-    duration: 0.3,
-  },
-  smoothChildTiming: true,
-
-  onReverseComplete: () => {
-    popupSection.classList.add("hidden");
-  },
-});
-let popupAnimation;
-popupAnimation = popupSectionTl
-  .from(popupContainer, { ease: "power3.out", y: -100, opacity: 0 })
-  .from(imgPopIcon, { y: 50, opacity: 0 })
-  .from(popTitle, { x: -50, opacity: 0 }, "-=90%")
-  .from(popupParagraph, { ease: "power3.out", y: -100, opacity: 0 }, "-=50%")
-  .from(popupSignature, { x: -50, opacity: 0 }, "-=50%");
-
 btnForPopup.forEach((btn, i) => {
   btn.addEventListener("click", (e) => {
     popupSection.classList.remove("hidden");
@@ -37,10 +18,6 @@ btnForPopup.forEach((btn, i) => {
     imgPopIcon.setAttribute("src", `./imgs/icons/${i + 1}-icon.png`);
     popupParagraph.textContent = data[i].desc;
     popTitle.textContent = data[i].title;
-
-    //
-
-    popupAnimation.play();
   });
 });
 const golabaleTl = gsap.timeline({
@@ -61,8 +38,8 @@ golabaleTl
 
 //eventListener
 closebtn.addEventListener("click", (e) => {
-  popupAnimation.reverse();
+  popupSection.classList.add("hidden");
 });
 overlay.addEventListener("click", (e) => {
-  popupAnimation.reverse();
+  popupSection.classList.add("hidden");
 });
