@@ -21,6 +21,13 @@ let popupSectionTl = gsap.timeline({
   },
 });
 let popupAnimation;
+popupAnimation = popupSectionTl
+  .from(popupContainer, { ease: "power3.out", y: -100, opacity: 0 })
+  .from(imgPopIcon, { y: 50, opacity: 0 })
+  .from(popTitle, { x: -50, opacity: 0 }, "-=90%")
+  .from(popupParagraph, { ease: "power3.out", y: -100, opacity: 0 }, "-=50%")
+  .from(popupSignature, { x: -50, opacity: 0 }, "-=50%")
+  .from(closebtn, { x: -50, y: -50, rotate: "-50deg", opacity: 0 }, "-=50%");
 btnForPopup.forEach((btn, i) => {
   btn.addEventListener("click", (e) => {
     popupSection.classList.remove("hidden");
@@ -32,21 +39,7 @@ btnForPopup.forEach((btn, i) => {
     popTitle.textContent = data[i].title;
 
     //
-    popupAnimation = popupSectionTl
-      .from(popupContainer, { ease: "power3.out", y: -100, opacity: 0 })
-      .from(imgPopIcon, { y: 50, opacity: 0 })
-      .from(popTitle, { x: -50, opacity: 0 }, "-=90%")
-      .from(
-        popupParagraph,
-        { ease: "power3.out", y: -100, opacity: 0 },
-        "-=50%",
-      )
-      .from(popupSignature, { x: -50, opacity: 0 }, "-=50%")
-      .from(
-        closebtn,
-        { x: -50, y: -50, rotate: "-50deg", opacity: 0 },
-        "-=50%",
-      );
+
     popupAnimation.play();
   });
 });
