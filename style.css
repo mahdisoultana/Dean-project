@@ -532,7 +532,7 @@ body {
   border-bottom: 1px solid rgb(9, 0, 58);
   justify-content: flex-end;
   align-items: center;
-
+  height: 100%;
   display: flex;
   font-size: 1.3rem;
 }
@@ -583,7 +583,7 @@ a:active {
   justify-content: flex-start;
   align-items: center;
   display: flex;
-  height: auto;
+  height: 100% !important;
   overflow: hidden;
   line-height: 1;
 }
@@ -699,8 +699,13 @@ a:active {
   margin: 0;
   width: 70px;
   height: auto;
+  margin-left: 1rem;
 }
-
+@media (max-width: 622px) {
+  .img-title-popup img {
+    margin-left: 0.5rem;
+  }
+}
 .path {
   fill: white;
 }
@@ -821,6 +826,12 @@ a:active {
 .popup-container {
   width: 70%;
   position: relative;
+}
+.popup-container article {
+  padding: 0.5rem;
+}
+.popup-container article {
+  padding: 0.5rem;
 }
 
 @media (max-width: 822px) {
