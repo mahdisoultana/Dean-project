@@ -12,7 +12,7 @@ const popTitle = imgTitlePopup.querySelector("span");
 let popupSectionTl = gsap.timeline({
   defaults: {
     // children inherit these defaults
-    duration: 0.5,
+    duration: 0.3,
   },
   smoothChildTiming: true,
 
@@ -45,13 +45,14 @@ btnForPopup.forEach((btn, i) => {
 });
 const golabaleTl = gsap.timeline({
   defaults: {
-    duration: 0.5,
+    duration: 0.6,
+    ease: "power3.in",
   },
 });
 // animation row on start
 
 golabaleTl
-  .from(".boxstyle1", { height: 0, duration: 1 })
+  .from(".boxstyle1", { height: 0 })
   .fromTo(
     btnForPopup,
     { x: -100, opacity: 0 },
