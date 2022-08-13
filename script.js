@@ -71,6 +71,8 @@ btnForPopup.forEach((btn, i) => {
     imgPopIcon.setAttribute("src", `./imgs/icons/${i + 1}-icon.png`);
     popupParagraph.textContent = data[i].desc;
     popTitle.textContent = data[i].title;
+
+    animate();
   });
 });
 closebtn.addEventListener("click", (e) => {
@@ -79,3 +81,6 @@ closebtn.addEventListener("click", (e) => {
 overlay.addEventListener("click", (e) => {
   popupSection.classList.add("hidden");
 });
+
+const popupSectionTl = gsap;
+function animate() {}
