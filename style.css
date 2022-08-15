@@ -738,6 +738,7 @@ a:active {
   font-weight: bold;
   color: white;
 }
+
 .gr-1-row {
   background: linear-gradient(
     1.14deg,
@@ -787,6 +788,10 @@ a:active {
 .gr-7-row {
   background: linear-gradient(0deg, #bf001a, #bf001a);
 }
+.gr-8-row {
+  background: linear-gradient(-90deg, #213bd1, #099ee4);
+}
+
 .gr-4-row .closebtn:hover .path,
 .gr-4-row .closebtn:hover span,
 .gr-6-row .closebtn:hover .path,
