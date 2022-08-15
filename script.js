@@ -16,8 +16,13 @@ btnForPopup.forEach((btn, i) => {
     popupContainer.classList.add(`gr-${i + 1}-row`);
 
     imgPopIcon.setAttribute("src", `./imgs/icons/${i + 1}-icon.png`);
-    popupParagraph.textContent = data[i].desc;
-    popTitle.textContent = data[i].title;
+    popupParagraph.innerHTML = data[i].desc;
+    popTitle.innerHTML = data[i].title;
+    gsap.fromTo(
+      popupContainer,
+      { y: -50, opacity: 0 },
+      { ease: "power3.out", y: 0, opacity: 1, duration: 0.23 },
+    );
   });
 });
 const golabaleTl = gsap.timeline({
@@ -29,7 +34,7 @@ const golabaleTl = gsap.timeline({
 // animation row on start
 
 golabaleTl
-  .from(".boxstyle1", { height: 0 })
+  .fromTo(".boxstyle1", { height: 0 }, { height: "100%" })
   .fromTo(
     btnForPopup,
     { x: -100, opacity: 0 },
