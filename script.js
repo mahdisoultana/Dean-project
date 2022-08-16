@@ -42,9 +42,15 @@ golabaleTl
   );
 
 //eventListener
+
+const state = {};
+const url = "/";
+
 closebtn.addEventListener("click", (e) => {
   popupSection.classList.add("hidden");
+  history.pushState(state, "", url);
 });
 overlay.addEventListener("click", (e) => {
   popupSection.classList.add("hidden");
+  history.pushState(state, "", url);
 });
