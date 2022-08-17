@@ -594,7 +594,9 @@ a:active {
   line-height: 1;
 }
 .boxstyle img {
-  width: 45px;
+  width: 47px;
+  /* 👇👇 From here you can change the margin for the row icons  */
+  margin-left: 2rem;
 }
 .boxstyle:hover {
   background: rgb(67, 89, 185);
@@ -818,6 +820,7 @@ b.underline {
   margin-left: auto;
   padding: 0 1.2rem;
   font-weight: 500;
+  width: 60%;
 }
 .style-scroll::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
