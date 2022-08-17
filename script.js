@@ -9,6 +9,31 @@ const btnForPopup = [...document.querySelectorAll(".btn-for-popup")];
 const imgPopIcon = imgTitlePopup.querySelector("img");
 const popTitle = imgTitlePopup.querySelector("span");
 
+// load popup on start 🤓🌟
+window.addEventListener("load", () => {
+  let allHrefs = [];
+  btnForPopup.forEach((btn, i) => {
+    btn.setAttribute("href", data[i].href);
+    allHrefs.push(encodeURI(data[i].href));
+  });
+
+  const urlParams = window.location.href;
+  const hashIndex = urlParams.indexOf("#");
+  const urlToken = urlParams.slice(hashIndex);
+
+  allHrefs.forEach((url, i) => {
+    if (url == urlToken) {
+      popupSection.classList.remove("hidden");
+      popupContainer.className = "popup-container";
+      popupContainer.classList.add(`gr-${i + 1}-row`);
+      imgPopIcon.setAttribute("src", `./imgs/icons/${i + 1}-icon.png`);
+      popupParagraph.innerHTML = data[i].desc;
+      popTitle.innerHTML = data[i].title;
+      popupSignature.innerHTML = data[i].signature || "";
+    }
+  });
+});
+
 btnForPopup.forEach((btn, i) => {
   btn.addEventListener("click", (e) => {
     popupSection.classList.remove("hidden");
