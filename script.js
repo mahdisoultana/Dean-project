@@ -18,7 +18,7 @@ btnForPopup.forEach((btn, i) => {
     imgPopIcon.setAttribute("src", `./imgs/icons/${i + 1}-icon.png`);
     popupParagraph.innerHTML = data[i].desc;
     popTitle.innerHTML = data[i].title;
-    popupSignature.innerHTML = data[i].signature;
+    popupSignature.innerHTML = data[i].signature || "";
     gsap.fromTo(
       popupContainer,
       { y: -50, opacity: 0 },

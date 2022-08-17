@@ -762,6 +762,16 @@ a:active {
     #0071bc 101.15%
   );
 }
+.normal {
+  text-decoration: underline;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
 .gr-3-row {
   background-image: linear-gradient(180deg, #5abe15, #5abe15, #5abe15);
 }
