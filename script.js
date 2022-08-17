@@ -45,7 +45,7 @@ golabaleTl
 //eventListener
 
 const state = {};
-const url = "/";
+const url = "/Dean-project/";
 
 closebtn.addEventListener("click", (e) => {
   popupSection.classList.add("hidden");
