@@ -47,24 +47,34 @@ btnForPopup.forEach((btn, i) => {
     gsap.fromTo(
       popupContainer,
       { y: -50, opacity: 0 },
-      { ease: "power3.out", y: 0, opacity: 1, duration: 0.23 },
+      { ease: "power3.out", y: 0, opacity: 1, duration: animationDuration },
     );
   });
 });
 const golabaleTl = gsap.timeline({
   defaults: {
-    duration: 0.3,
+    duration: animationDuration,
     ease: "power1.in",
   },
 });
 // animation row on start
 
 golabaleTl
-  .fromTo(".boxstyle1", { height: 0 }, { height: "100%" })
+  .fromTo(
+    ".boxstyle1",
+    { height: 0, duration: animationDuration },
+    { height: "100%", duration: animationDuration },
+  )
   .fromTo(
     btnForPopup,
-    { x: -100, opacity: 0 },
-    { x: 0, opacity: 1, stagger: 0.1, ease: "elastic.out(1, 1)" },
+    { x: -100, opacity: 0, duration: animationDuration },
+    {
+      x: 0,
+      opacity: 1,
+      stagger: 0.1,
+      ease: "elastic.out(1, 1)",
+      duration: animationDuration,
+    },
   );
 
 //eventListener
