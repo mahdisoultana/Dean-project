@@ -655,7 +655,7 @@ a:active {
 }
 .popup article {
   border-radius: 0.4rem;
-  overflow: auto;
+  overflow-y: auto;
   height: 100%;
   padding: 0 0 1rem;
 }
@@ -872,13 +872,12 @@ b.underline {
   /* creates padding around scroll thumb */
 }
 .popup-container {
+  overflow-x: hidden;
   width: 70%;
   position: relative;
 }
 .popup-container article {
-  padding: 0.5rem;
-}
-.popup-container article {
+  overflow-x: hidden;
   padding: 0.5rem;
 }
 
