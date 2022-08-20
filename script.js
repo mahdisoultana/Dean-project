@@ -9,7 +9,7 @@ const btnForPopup = [...document.querySelectorAll(".btn-for-popup")];
 const imgPopIcon = imgTitlePopup.querySelector("img");
 const popTitle = imgTitlePopup.querySelector("span");
 const state = {};
-const url = "/";
+const url = "/Dean-project/";
 let popupAnimation;
 
 const popupSectionTl = gsap.timeline({
