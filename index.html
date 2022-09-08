@@ -114,7 +114,7 @@
 לחינוך גופני לילדים ולגיל הרך.
 `,
           signature: `מסגרת הפעילות:
-      <br/>
+
       45 דקות,
       <br/>
       1-2 בשבוע.`,
@@ -139,6 +139,7 @@
       45-90 דקות,
       <br/>
       1-3 בשבוע.`,
+          signatureHref: `<a href='https://google.com' class='dark'>התכנית מתמקדת בשיפור רמת המשחק ומאפשרת לילדים ל</a>`,
         },
         {
           href: "#competitive-tennis",
@@ -334,17 +335,16 @@
             מוסמך של בית הספר לטניס.
           </div>
 
-          <div class="flex justify-end">
+          <div class="flex justify-end items-center popup-signature-container">
             <div
               class="rounded-l-full md:text-2xl sm:text-xl text-base text-white popup-signature"
             >
               כגון טיולי טניס לחו"ל
             </div>
+            <p class="popup-herf-signature"></p>
           </div>
         </article>
-        <div
-          class="md:top-4 top-2 absolute left-4 md:w-32 w-20 md:h-32 h-20 rounded-full img"
-        ></div>
+
         <button
           title="Go Back"
           class="absolute left-4 w-16 h-16 md:w-20 md:h-20 rounded-full closebtn"
@@ -365,6 +365,9 @@
           </svg>
           <span> חזור </span>
         </button>
+        <div
+          class="md:top-4 top-2 absolute left-4 md:w-32 w-20 md:h-32 h-20 rounded-full img"
+        ></div>
         <div class="h-[70%] z-10 md:w-[26%] w-[50%] absolute bottom-0 right-0">
           <svg
             width="100%"

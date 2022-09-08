@@ -843,10 +843,51 @@ b.underline {
     #3f87ff 99.01%
   );
   display: inline-block;
-  margin-left: auto;
+  margin-left: 2vw;
   padding: 0 1.2rem;
   font-weight: 500;
   width: 60%;
+}
+.popup-herf-signature {
+  width: 30%;
+  font-size: 1.2rem;
+  color: white;
+}
+.popup-herf-signature a {
+  font-size: 1.2rem;
+  color: white;
+  display: block;
+  text-align: center;
+}
+.popup-herf-signature.dark,
+.popup-herf-signature a.dark {
+  font-weight: 700;
+  color: rgb(7, 0, 36);
+}
+.popup-signature-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+@media (max-width: 722px) {
+  .popup-signature {
+    width: 70%;
+  }
+  .popup-signature-container {
+    flex-direction: column;
+  }
+  .popup-herf-signature {
+    margin-top: 0.8rem;
+    display: block;
+    width: 55%;
+    font-size: 0.7rem;
+  }
+  .popup-herf-signature a {
+    margin-top: 0.6rem;
+    display: block;
+
+    font-size: 0.8rem;
+  }
 }
 .style-scroll::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
